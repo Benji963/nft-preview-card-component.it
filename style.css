@@ -1,0 +1,217 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --clr-primary-900: hsl(217, 54%, 11%);
+  --clr-secondary-800: hsl(216, 50%, 16%);
+  --very-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --ff-base: "Outfit", sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  display: grid;
+  max-width: 350px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  background-color: var(--clr-primary-900);
+}
+
+.product {
+  width: 450px;
+  margin: 2rem 1rem;
+  padding: 25px;
+  border-radius: 1rem;
+  background-color: var(--clr-secondary-800);
+}
+
+.product-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-img img {
+  height: 400px;
+  width: 400px;
+  display: block;
+  border-radius: 1rem;
+}
+
+.img-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  /* opacity: calc(0.5); */
+  display: none;
+}
+
+.img-overlay img {
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.product-img:hover .img-overlay {
+  display: block;
+}
+
+.product-content {
+  font-family: var(--ff-base);
+  /* background-color: var(--white); */
+  /* padding: 0.5rem; */
+}
+
+.product-name {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.info {
+  font-size: 18px;
+  font-weight: 300;
+  width: 400;
+  /* background-color: brown; */
+  padding-bottom: 1rem;
+  color: var(--soft-blue);
+}
+
+.product-info {
+  display: flex;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding-bottom: 1rem;
+  color: var(--very-dark-blue);
+}
+
+.product-price {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--cyan);
+  padding-right: 5rem;
+  align-items: center;
+}
+
+.product-price img {
+  padding-right: 0.5rem;
+  height: 1.3rem;
+  /* background-color: black; */
+}
+
+.product-time {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--soft-blue);
+  padding-left: 5rem;
+  align-items: center;
+}
+.product-time img {
+  padding-right: 0.5rem;
+  height: 1.1rem;
+  /* background-color: black; */
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  color: var(--soft-blue);
+}
+
+.flex-group img {
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin: 1rem 1rem 1rem 0;
+  border: solid white;
+  border-width: 2px;
+}
+span {
+  color: white;
+}
+
+.product-img :hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.product-name :hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
